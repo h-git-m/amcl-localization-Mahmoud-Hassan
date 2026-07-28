@@ -6,14 +6,14 @@ Localize a TurtleBot3 inside a previously saved SLAM map using AMCL (Adaptive Mo
 
 ## 1. Project Overview
 
-This project takes the map produced in a previous SLAM assignment and uses it to localize the robot with **AMCL**. The package (originally downloaded as `robot_localization` and renamed to **`robot_navigation`**) bundles the saved map, an AMCL parameter file, and a launch file that brings up `map_server`, `amcl`, and `nav2_lifecycle_manager` together so the robot can estimate its pose (x, y, yaw) inside the known map using LiDAR scan matching against odometry.
+This project takes the map produced in a previous SLAM assignment and uses it to localize the robot with **AMCL**. The package (originally downloaded as `robot_navigation` and renamed to **`robot_localization`**) bundles the saved map, an AMCL parameter file, and a launch file that brings up `map_server`, `amcl`, and `nav2_lifecycle_manager` together so the robot can estimate its pose (x, y, yaw) inside the known map using LiDAR scan matching against odometry.
 
 **Goals demonstrated in this run:**
 - Load the saved map with `map_server` and confirm it renders correctly in RViz.
 - Launch AMCL without errors, with `/scan` and `/odom` available.
 - Visualize map, robot model, LiDAR scan, TF tree, and particle cloud in RViz.
 - Give a deliberately wrong initial pose and observe the scan/map mismatch.
-- Give the correct initial pose and observe convergence.
+- Give the correct initial pose, drive robot around, and observe convergence.
 - Drive the robot and confirm localization stays stable while moving.
 - Confirm AMCL publishes the `map → odom` transform and that `/amcl_pose` updates continuously.
 
@@ -33,10 +33,10 @@ amcl-localization-[YOUR-NAME]/
     │   └── turtlebot3_world_map.pgm   # Occupancy grid image saved from the SLAM task
     ├── rviz/
     │   └── AMCL.rviz                  # Saved RViz display configuration
-    ├── images/                        # Screenshots referenced in this README
     ├── CMakeLists.txt
-    ├── package.xml
-    └── README.md
+    └── package.xml
+├── images/                            # Screenshots referenced in this README
+└── README.md
 ```
 
 **Notes:**
