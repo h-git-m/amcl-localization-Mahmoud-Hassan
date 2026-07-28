@@ -115,29 +115,35 @@ To test the effect of the initial pose estimate, **2D Pose Estimate** was used t
 
 **Wrong initial pose**
 
-![Wrong initial pose](images/wrong_initial_pose.png)
+![Wrong initial pose](images/A7_wrong_pose.png)
+![Wrong initial pose1](images/A7_wrong_pose_1.png)
 
-*Observation:* _(add your observation here — e.g. the LiDAR scan does not align with the map walls, the particle cloud is scattered or concentrated in the wrong region, and `/amcl_pose` reports a position inconsistent with the robot's real location in Gazebo.)_
+*Observation:* The LiDAR scan does not align with the map walls, the particle cloud is scattered or concentrated in the wrong region, and `/amcl_pose` reports a position inconsistent with the robot's real location in Gazebo.
 
 **Correct initial pose**
 
-![Correct initial pose](images/correct_initial_pose.png)
+![Correct initial pose](images/A7_right_pose.png)
+![Correct initial pose1](images/A7_right_pose_1.png)
+![Correct initial pose2](images/A7_right_pose_2.png)
 
-*Observation:* _(add your observation here — e.g. the LiDAR scan overlays cleanly onto the map's walls/obstacles, the particle cloud converges tightly around the robot, and `/amcl_pose` matches the robot's known position in Gazebo.)_
+*Observation:* The LiDAR scan overlays cleanly onto the map's walls/obstacles, the particle cloud converges tightly around the robot after moving around, and `/amcl_pose` matches the robot's known position in Gazebo.
 
 ---
 
 ## 7. Particle Cloud Screenshot
 
-![Particle cloud convergence](images/particle_cloud.png)
-
 *Shows the particle cloud converging around the robot's estimated pose as it moves and AMCL refines the estimate via scan matching.*
+
+![Correct initial pose1](images/A7_right_pose_1.png)
+
+![Correct initial pose2](images/A7_right_pose_2.png)
+
 
 ---
 
 ## 8. TF Tree Screenshot
 
-![TF tree](images/tf_tree.png)
+![TF tree](images/A7_TF_tree.png)
 
 *Shows the `map → odom → base_footprint → ... → base_scan` transform chain, with `map → odom` published by AMCL.*
 
@@ -232,7 +238,7 @@ This confirms AMCL is actively publishing the `map → odom` correction transfor
 
 ## 10. Demo Video
 
-_(add the demo video link here)_
+https://github.com/user-attachments/assets/2abe89d3-363f-43ac-b28a-2d7aa9ec7792
 
 ---
 
