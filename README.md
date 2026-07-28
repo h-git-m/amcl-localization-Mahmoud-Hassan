@@ -247,4 +247,3 @@ https://github.com/user-attachments/assets/2abe89d3-363f-43ac-b28a-2d7aa9ec7792
 | Problem | Solution |
 |---|---|
 | Map fails to load in RViz after configuring the Map display | Kill the AMCL launch terminal and re-launch `ros2 launch robot_navigation amcl.launch.py`. |
-| _(add any other problems you faced)_ | _(add the corresponding fix)_ |
